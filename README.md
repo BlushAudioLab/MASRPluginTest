@@ -3,8 +3,8 @@
 ### On the Web
 
 - Create a Github Account with your university email
-- Go to this repo - https://github.com/BlushAudioLab/MASRAudioPluginTemplate.git and click 'Use this template' and 'Create a new repository' - DO NOT SELECT 'Open in a codespace'.
-- Name it and add a description.
+- Go to this repo - https://github.com/BlushAudioLab/MASRAudioPluginTemplate.git and click 'Use this template' and 'Create a new repository' - DO NOT SELECT 'Open in a codespace'
+- Name it and add a description
 - In your new repo go to 'Code', 'Local', 'HTTPS' and copy the URL
 
 ### On your Mac
@@ -13,10 +13,10 @@
 - Enter the command 'cd Desktop'
 - Enter the command 'mkdir Digital\ Audio\ Programming'
 - Enter the command 'cd Digital\ Audio\ Programming'
-- In Terminal type 'git clone <URL of your repo>'
-- Open CLion - Open Project - Desktop/Digital Audio Programming/<your project folder>
+- In Terminal type 'git clone >URL of your repo<'
+- Open CLion - Open Project - Desktop/Digital Audio Programming/ >your project folder<
 - In the 'Open Project Wizard' just use the default configurations for compilers etc...
-- On the next page tick 'Reload CMake Project on editing...' and keep everything else as is. Hit 'Finish'.
+- On the next page keep everything else as is and hit 'Finish'.
 - Open the CMakeLists.txt file from within CLion andModify the following variables with your own values:
     - COMPANY_NAME
     - PLUGIN_MANUFACTURER_CODE
