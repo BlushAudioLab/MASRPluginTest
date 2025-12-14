@@ -13,8 +13,8 @@
 - Enter the command 'cd Desktop'
 - Enter the command 'mkdir Digital\ Audio\ Programming'
 - Enter the command 'cd Digital\ Audio\ Programming'
-- In Terminal type 'git clone >URL of your repo<'
-- Open CLion - Open Project - Desktop/Digital Audio Programming/ >your project folder<
+- In Terminal type 'git clone \<URL of your repo\>'
+- Open CLion - Open Project - Desktop/Digital Audio Programming/ \<your project folder\>
 - In the 'Open Project Wizard' just use the default configurations for compilers etc...
 - On the next page keep everything else as is and hit 'Finish'.
 - Open the CMakeLists.txt file from within CLion andModify the following variables with your own values:
