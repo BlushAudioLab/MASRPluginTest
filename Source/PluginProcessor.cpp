@@ -14,7 +14,7 @@ AudioPluginAudioProcessor::AudioPluginAudioProcessor()
 {
 }
 
-AudioPluginAudioProcessor::~AudioPluginAudioProcessor()
+AudioPluginAudioProcessor::~AudioPluginAudioProcessor() // NOLINT(*-use-equals-default)
 {
 }
 
@@ -87,7 +87,7 @@ void AudioPluginAudioProcessor::changeProgramName (int index, const juce::String
 void AudioPluginAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
     // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    // initialisation that you need…
     juce::ignoreUnused (sampleRate, samplesPerBlock);
 }
 
@@ -149,7 +149,7 @@ void AudioPluginAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
     {
         auto* channelData = buffer.getWritePointer (channel);
         juce::ignoreUnused (channelData);
-        // ..do something to the data...
+        // …do something to the data...
     }
 }
 
@@ -181,7 +181,7 @@ void AudioPluginAudioProcessor::setStateInformation (const void* data, int sizeI
 }
 
 //==============================================================================
-// This creates new instances of the plugin..
+// This creates new instances of the plugin…
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new AudioPluginAudioProcessor();
