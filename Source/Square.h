@@ -1,13 +1,12 @@
-//
-// Created by Blush Audio Dev on 15/12/2025.
-//
 
-#ifndef MRCOOLDUDE_SQUARE_H
-#define MRCOOLDUDE_SQUARE_H
+#pragma once
 
+#include <juce_gui_basics/juce_gui_basics.h>
 
-class Square {
+class Square : public juce::Component
+{
+public:
+
+    void paint (juce::Graphics&) override;
+    void resized() override;
 };
-
-
-#endif //MRCOOLDUDE_SQUARE_H
