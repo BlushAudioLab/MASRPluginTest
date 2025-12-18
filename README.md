@@ -1,4 +1,4 @@
-# MASRAudioPluginTemplate
+# MASR Audio Plugin Template
 
 ### On the Web
 
@@ -28,3 +28,8 @@
 - If that succeeds hit 'run'
 - The standalone version of the plugin should open up and display the text "Hello York!"
 - You're ready to start coding!
+
+### Requirements
+
+Mac OS Sequoia+
+<br>XCode V26+
