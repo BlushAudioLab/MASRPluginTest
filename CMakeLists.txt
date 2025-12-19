@@ -33,6 +33,8 @@ set(SourceFiles
         Source/PluginEditor.h
         Source/PluginProcessor.cpp
         Source/PluginProcessor.h
+        Source/SineWave.h
+        Source/SineWave.cpp
 )
 
 # Change these to your own preferences
