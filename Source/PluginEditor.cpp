@@ -7,8 +7,6 @@ AudioPluginAudioProcessorEditor::AudioPluginAudioProcessorEditor (AudioPluginAud
 {
     juce::ignoreUnused (processorRef);
 
-    addAndMakeVisible (& square);
-
     setSize (400, 300);
 }
 
@@ -29,5 +27,5 @@ void AudioPluginAudioProcessorEditor::paint (juce::Graphics& g)
 
 void AudioPluginAudioProcessorEditor::resized()
 {
-    square.setBounds (100, 100, 200, 200);
+
 }
