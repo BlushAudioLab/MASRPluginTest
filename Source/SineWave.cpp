@@ -4,7 +4,7 @@
 
 #include "SineWave.h"
 
-void SineWave::prepare(double sampleRate, int numChannels)
+void SineWave::prepare(const double sampleRate, const int numChannels)
 {
     currentSampleRate = static_cast<float>(sampleRate);
     timeIncrement = 1.0f / currentSampleRate;
