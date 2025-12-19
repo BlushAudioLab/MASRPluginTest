@@ -87,7 +87,12 @@ void AudioPluginAudioProcessor::changeProgramName (int index, const juce::String
 void AudioPluginAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
     juce::ignoreUnused (sampleRate, samplesPerBlock);
-    sinewave.prepare(sampleRate, getTotalNumOutputChannels());
+
+    sineWaves.resize(static_cast<size_t>(getTotalNumOutputChannels()));
+    for(auto& wave : sineWaves)
+    {
+        wave.prepare(sampleRate);
+    }
 }
 
 void AudioPluginAudioProcessor::releaseResources()
@@ -132,13 +137,10 @@ void AudioPluginAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    sinewave.process(buffer);
-
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
+    for (int channel = 0; channel < buffer.getNumChannels(); ++channel)
     {
-        auto* channelData = buffer.getWritePointer (channel);
-        juce::ignoreUnused (channelData);
-        // …do something to the data...
+        auto* output = buffer.getWritePointer (channel);
+        sineWaves[static_cast<size_t>(channel)].process(output, buffer.getNumSamples());
     }
 }
 
