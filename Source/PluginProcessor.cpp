@@ -87,7 +87,7 @@ void AudioPluginAudioProcessor::changeProgramName (int index, const juce::String
 void AudioPluginAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
     juce::ignoreUnused (sampleRate, samplesPerBlock);
-    sinewave.prepare(sampleRate);
+    sinewave.prepare(sampleRate, getTotalNumOutputChannels());
 }
 
 void AudioPluginAudioProcessor::releaseResources()
